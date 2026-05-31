@@ -1838,6 +1838,45 @@ footer{
     font-weight: bold;
 }
 
+/* ==================== MOBILE RESPONSIVE FIX ==================== */
+@media (max-width: 768px) {
+    
+    /* 1. จัดระเบียบแถบเมนูด้านบนใหม่ ให้เรียงต่อกันเป็นแนวตั้ง (ไม่ทับกัน) */
+    header, nav, .navbar { 
+        display: flex !important;
+        flex-direction: column !important; /* สั่งให้โลโก้อยู่บน เมนูอยู่ล่าง */
+        align-items: center !important;
+        gap: 15px !important;
+        padding: 20px 10px !important;
+        height: auto !important; /* ปลดล็อกความสูงไม่ให้โดนบีบ */
+    }
+
+    /* 2. ลดขนาดตัวอักษร DUSK ลงมาหน่อยเพื่อให้พอดีหน้าจอมือถือ */
+    .logo, header h1, nav h1, .brand-title {
+        font-size: 32px !important; 
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: center !important;
+    }
+
+    /* 3. จัดระเบียบกลุ่มลิงก์เมนู (หน้าแรก, เกี่ยวกับ, ทีมงาน) */
+    .nav-links, nav ul, header ul, .menu {
+        display: flex !important;
+        flex-wrap: wrap !important; /* ถ้าพื้นที่จอมือถือแคบเกินไป ให้ตัดขึ้นบรรทัดใหม่สวย ๆ */
+        justify-content: center !important;
+        gap: 12px 20px !important; /* เว้นระยะห่างระหว่างปุ่มเมนูไม่ให้ติดกันเกินไป */
+        padding: 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
+    }
+
+    /* 4. ปรับขนาดตัวหนังสือลิงก์เมนูให้จิ้มง่ายขึ้นในมือถือ */
+    .nav-links a, nav ul li a, .menu a {
+        font-size: 16px !important;
+        white-space: nowrap !important; /* ห้ามตัวหนังสือตัดคำมั่ว */
+    }
+}
+
 
 
 
