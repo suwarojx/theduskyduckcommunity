@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - DUSK</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html">DUSK</a>
+  </div>
+
+  <div class="menu">
+    <a href="index.html">หน้าหลัก</a>
+
+    <div class="dropdown">
+      <a href="javascript:void(0);" class="dropdown-trigger">เกี่ยวกับ</a>
+      <div class="dropdown-menu">
+        <a href="new.html">ข่าวสาร</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">ข้อมูลติดต่อ</a>
+        <a href="feedback.html">Feedback</a>
+      </div>
+    </div>
+
+    <a href="https://docs.google.com/spreadsheets/d/1b8XUzjg0LRW1eghqyFfw-edwqzgakyKf_25sZq3WD0U/edit?usp=sharing" target="_blank">กฎเซิร์ฟเวอร์</a>
+    <a href="team.html">ทีมงาน</a>
+  </div>
+
+  <div class="login-zone" style="z-index: 10;">
+    </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero small-hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>
+            COMMUNITY <span>FEEDBACK</span>
+        </h1>
+
+        <p>
+            ทุกความคิดเห็นของคุณมีคุณค่า
+            และช่วยให้ DUSK พัฒนาไปได้ดียิ่งขึ้น
+        </p>
+
+    </div>
+
+</section>
+
+<!-- CONTENT -->
+
+<section class="content">
+
+    <div class="box">
+
+        <h2>Feedback DUSK Community</h2>
+
+        <p>
+            หากคุณมีข้อเสนอแนะ แจ้งปัญหา
+            หรือความคิดเห็นเกี่ยวกับเซิร์ฟเวอร์
+            สามารถส่ง Feedback ให้ทีมงานได้ผ่านแบบฟอร์มด้านล่าง
+        </p>
+
+        <p>
+            ทีมงานจะนำข้อมูลไปพิจารณาและปรับปรุงเซิร์ฟเวอร์ให้ดีขึ้น
+        </p>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeyIU8MkiOQeS_VtkVgeNtExTYabejpW6JPpNU5WRqPJEyHfA/viewform?usp=publish-editor"
+           target="_blank"
+           class="news-btn">
+
+            ส่ง Feedback
+
+        </a>
+
+    </div>
+
+    <div class="box">
+
+        <h2>เหตุผลที่ควรส่ง Feedback</h2>
+
+        <p> ช่วยพัฒนาเซิร์ฟเวอร์ให้ดีขึ้น</p>
+        <p> แจ้งปัญหาที่พบระหว่างเล่น</p>
+        <p> เสนอไอเดียใหม่ ๆ ให้ทีมงาน</p>
+        <p> มีส่วนร่วมในการพัฒนา Community</p>
+
+    </div>
+
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const trigger = document.querySelector('.dropdown-trigger');
+    const menu = document.querySelector('.dropdown-menu');
+
+    if (trigger && menu) {
+      // 1. เมื่อคลิกที่คำว่า "เกี่ยวกับ" ให้เปิด/ปิด เมนูสลับกัน
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation(); // กันไม่ให้คำสั่งหลุดไปโดนจุดอื่น
+        menu.classList.toggle('show');
+      });
+
+      // 2. ถ้าเมนูกางอยู่ แล้วเผลอไปคลิกพื้นที่อื่นบนหน้าเว็บ ให้หุบเก็บอัตโนมัติ (ไม่เกะกะสายตา)
+      document.addEventListener('click', function() {
+        if (menu.classList.contains('show')) {
+          menu.classList.remove('show');
+        }
+      });
+    }
+  });
+</script>
+
+
+<footer>
+    <div class="footer-container">
+      
+      <div class="footer-socials">
+        <h3>FOLLOW US</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/18hBKsR55V/" target="_blank" class="social-item fb">
+            Facebook Fanpage
+          </a>
+          <a href="https://www.tiktok.com/@verdanazero" target="_blank" class="social-item tt">
+            TikTok
+          </a>
+          <a href="https://discord.gg/CHJv92x4Cu" target="_blank" class="social-item dc">
+            Discord Server
+          </a>
+        </div>
+      </div>
+
+      <hr class="footer-divider">
+
+      <div class="footer-copyright">
+        © 2026 The Dusky Duck Community — All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
