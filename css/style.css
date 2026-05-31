@@ -1838,70 +1838,53 @@ footer{
     font-weight: bold;
 }
 
-/* ==================== MOBILE RESPONSIVE FIX (V3) ==================== */
+/* ==================== MOBILE RESPONSIVE FIX (FORCE ALL) ==================== */
 @media (max-width: 768px) {
     
-    /* จัดการกล่อง navbar หลัก ให้เรียงเป็นแนวตั้ง */
-    .navbar { 
+    /* บังคับเปิดสวิตช์ให้ทุกกล่องหลักห้ามซ่อน ห้ามลอยทับกัน */
+    .navbar, .menu, .dropdown, .logo {
         display: flex !important;
-        flex-direction: column !important; 
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: static !important;
+    }
+    
+    /* จัด Navbar ให้เรียงเป็นแนวตั้งตรงกลาง */
+    .navbar {
+        flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
         gap: 15px !important;
+        height: auto !important;
         padding: 20px 10px !important;
-        height: auto !important;
-        position: relative !important;
     }
 
-    /* ปลดล็อกตัวโลโก้ และ กล่องเมนูหลัก ไม่ให้ลอยทับใคร */
-    .logo, .menu {
-        position: static !important; 
-        width: auto !important;
-        height: auto !important;
-        margin: 0 !important;
-        text-align: center !important;
-    }
-
+    /* จัดการข้อความโลโก้ DUSK */
     .logo a {
         font-size: 32px !important;
+        color: #ffffff !important;
         display: block !important;
     }
 
-    /* สั่งให้กล่องเมนูแผ่เต็มหน้าจอ และจัดลิงก์ข้างในเรียงต่อกันสวย ๆ */
-    .menu {
-        display: flex !important;
-        flex-direction: row !important; /* เรียงซ้ายไปขวา */
-        flex-wrap: wrap !important;     /* ถ้าพื้นที่ไม่พอให้ตัดลงบรรทัดใหม่อัตโนมัติ */
+    /* บังคับให้กล่องเมนู และกล่อง dropdown เรียงแถวหน้ากระดานต่อกันยาว ๆ */
+    .menu, .dropdown {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
         justify-content: center !important;
         align-items: center !important;
-        gap: 12px 15px !important;       /* เว้นระยะห่างระหว่างปุ่ม */
+        gap: 12px 18px !important;
         width: 100% !important;
     }
 
-    /* 🚨 ปลดล็อกกล่อง Dropdown บังคับให้กางไส้ในออกมาให้หมด ไม่ซ่อน ไม่ลอย */
-    .dropdown {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        position: static !important;
+    /* 🚨 หมัดฮุก: บังคับให้ลิงก์ "ทุกตัว" ในเมนูต้องโผล่มา และต้องเป็นสีขาวเท่านั้น! */
+    .navbar a, .menu a, .dropdown a, .menu div a {
+        display: inline-block !important;
         visibility: visible !important;
         opacity: 1 !important;
-        box-shadow: none !important;
-        background: transparent !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        gap: 12px 15px !important;
-    }
-
-    /* บังคับให้ลิงก์ทุกตัว (รวมถึงใน dropdown) แสดงผลเป็นสีขาว ตัวหนาพอดีมือถือ */
-    .menu a, .dropdown a {
-        display: inline-block !important;
-        font-size: 16px !important;
         color: #ffffff !important; /* บังคับตัวหนังสือสีขาว */
+        font-size: 16px !important;
         text-decoration: none !important;
         position: static !important;
-        visibility: visible !important;
-        opacity: 1 !important;
     }
 }
 
