@@ -1838,7 +1838,7 @@ footer{
     font-weight: bold;
 }
 
-/* ==================== MOBILE RESPONSIVE FIX (NEW) ==================== */
+/* ==================== MOBILE RESPONSIVE FIX (V3) ==================== */
 @media (max-width: 768px) {
     
     /* จัดการกล่อง navbar หลัก ให้เรียงเป็นแนวตั้ง */
@@ -1853,29 +1853,57 @@ footer{
         position: relative !important;
     }
 
-    /* ปลดล็อกตัวโลโก้ และ กล่องเมนู ไม่ให้ลอยทับกัน */
+    /* ปลดล็อกตัวโลโก้ และ กล่องเมนูหลัก ไม่ให้ลอยทับใคร */
     .logo, .menu {
-        position: static !important; /* สำคัญมาก: ป้องกันไม่ให้มันลอยไปทับกันเอง */
+        position: static !important; 
         width: auto !important;
         height: auto !important;
         margin: 0 !important;
         text-align: center !important;
     }
 
-    /* ลดขนาดตัวหนังสือคำว่า DUSK ลงมาหน่อย */
     .logo a {
         font-size: 32px !important;
+        display: block !important;
     }
 
-    /* จัดระเบียบปุ่มเมนูข้างใน ให้เรียงกันสวย ๆ ไม่ซ้อนกัน */
+    /* สั่งให้กล่องเมนูแผ่เต็มหน้าจอ และจัดลิงก์ข้างในเรียงต่อกันสวย ๆ */
     .menu {
         display: flex !important;
-        flex-wrap: wrap !important;
+        flex-direction: row !important; /* เรียงซ้ายไปขวา */
+        flex-wrap: wrap !important;     /* ถ้าพื้นที่ไม่พอให้ตัดลงบรรทัดใหม่อัตโนมัติ */
         justify-content: center !important;
-        gap: 10px 20px !important;
+        align-items: center !important;
+        gap: 12px 15px !important;       /* เว้นระยะห่างระหว่างปุ่ม */
+        width: 100% !important;
+    }
+
+    /* 🚨 ปลดล็อกกล่อง Dropdown บังคับให้กางไส้ในออกมาให้หมด ไม่ซ่อน ไม่ลอย */
+    .dropdown {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        position: static !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        gap: 12px 15px !important;
+    }
+
+    /* บังคับให้ลิงก์ทุกตัว (รวมถึงใน dropdown) แสดงผลเป็นสีขาว ตัวหนาพอดีมือถือ */
+    .menu a, .dropdown a {
+        display: inline-block !important;
+        font-size: 16px !important;
+        color: #ffffff !important; /* บังคับตัวหนังสือสีขาว */
+        text-decoration: none !important;
+        position: static !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 }
-
 
 
 
