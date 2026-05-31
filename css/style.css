@@ -1799,53 +1799,86 @@ footer{
     font-weight: bold;
 }
 
-/* ==================== MOBILE RESPONSIVE FIX (FORCE ALL) ==================== */
+/* ==================== MOBILE RESPONSIVE FIX (RESET POSITION) ==================== */
 @media (max-width: 768px) {
     
-    /* บังคับเปิดสวิตช์ให้ทุกกล่องหลักห้ามซ่อน ห้ามลอยทับกัน */
-    .navbar, .menu, .dropdown, .logo {
-        display: flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        position: static !important;
-    }
-    
-    /* จัด Navbar ให้เรียงเป็นแนวตั้งตรงกลาง */
+    /* 1. เคลียร์ตัวคลุมใหญ่ (Navbar) ไม่ให้เยื้อง ห้ามลอย */
     .navbar {
+        display: flex !important;
+        flex-direction: column !important; /* เรียงจากบนลงล่าง */
+        align-items: center !important;    /* จัดกึ่งกลางแนวนอน */
+        justify-content: center !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 20px 0 !important;
+        position: relative !important;
+        transform: none !important;
+        left: auto !important;
+        right: auto !important;
+        margin: 0 !important;
+    }
+
+    /* 2. จัดการโลโก้ DUSK อยู่ตรงกลาง */
+    .logo {
+        position: static !important;
+        margin-bottom: 15px !important;
+        text-align: center !important;
+        width: 100% !important;
+        transform: none !important;
+    }
+    .logo a {
+        display: inline-block !important;
+        font-size: 28px !important;
+        color: #ffffff !important;
+    }
+
+    /* 3. ล้างค่ากล่องเมนูทั้งหมด ห้ามลอย ห้ามเยื้องซ้ายหลุดจอ */
+    .menu {
+        display: flex !important;
+        flex-direction: column !important; /* จัดให้เรียงลงมาตรงๆ ทีละบรรทัด */
+        align-items: center !important;    /* บังคับให้อยู่ตรงกลางจอ ไม่ตกขอบ */
+        justify-content: center !important;
+        width: 100% !important;
+        position: static !important;
+        transform: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        left: auto !important;
+        gap: 12px !important;              /* ระยะห่างแนวตั้งระหว่างปุ่ม */
+    }
+
+    /* 4. ปลดล็อกกล่อง Dropdown ให้กางไส้ในออกมาเรียงตรงๆ ไม่ซ่อนไม่ลอย */
+    .dropdown {
+        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 15px !important;
-        height: auto !important;
-        padding: 20px 10px !important;
-    }
-
-    /* จัดการข้อความโลโก้ DUSK */
-    .logo a {
-        font-size: 32px !important;
-        color: #ffffff !important;
-        display: block !important;
-    }
-
-    /* บังคับให้กล่องเมนู และกล่อง dropdown เรียงแถวหน้ากระดานต่อกันยาว ๆ */
-    .menu, .dropdown {
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 12px 18px !important;
+        position: static !important;
+        transform: none !important;
         width: 100% !important;
-    }
-
-    /* 🚨 หมัดฮุก: บังคับให้ลิงก์ "ทุกตัว" ในเมนูต้องโผล่มา และต้องเป็นสีขาวเท่านั้น! */
-    .navbar a, .menu a, .dropdown a, .menu div a {
-        display: inline-block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
         visibility: visible !important;
         opacity: 1 !important;
+        gap: 12px !important;
+    }
+
+    /* 5. หมัดฮุกสุดท้าย: บังคับตัวลิงก์ทุกตัวให้อยู่ตรงกลาง ไม่โดนตัดตัวหนังสือ */
+    .navbar a, .menu a, .dropdown a {
+        display: inline-block !important;
+        position: static !important;
+        transform: none !important;
+        left: auto !important;
+        width: auto !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 5px 10px !important;
         color: #ffffff !important; /* บังคับตัวหนังสือสีขาว */
         font-size: 16px !important;
-        text-decoration: none !important;
-        position: static !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 }
 
