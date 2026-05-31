@@ -1799,86 +1799,101 @@ footer{
     font-weight: bold;
 }
 
-/* ==================== MOBILE RESPONSIVE FIX (RESET POSITION) ==================== */
+/* ==================== PREMIUM MOBILE NAVBAR DESIGN ==================== */
 @media (max-width: 768px) {
     
-    /* 1. เคลียร์ตัวคลุมใหญ่ (Navbar) ไม่ให้เยื้อง ห้ามลอย */
+    /* 1. ปรับบาร์บนสุดให้หรูหรา มีพื้นหลังไล่เฉดมืด+เส้นขอบม่วงจางๆ เข้ากับธีม */
     .navbar {
         display: flex !important;
-        flex-direction: column !important; /* เรียงจากบนลงล่าง */
-        align-items: center !important;    /* จัดกึ่งกลางแนวนอน */
+        flex-direction: column !important;
+        align-items: center !important;
         justify-content: center !important;
         width: 100% !important;
         height: auto !important;
-        padding: 20px 0 !important;
+        padding: 25px 0 !important;
         position: relative !important;
+        background: linear-gradient(180deg, rgba(10, 16, 32, 0.95) 0%, rgba(16, 24, 48, 0.9) 100%) !important;
+        border-bottom: 1px solid rgba(139, 92, 246, 0.2) !important; /* เส้นขอบล่างสีม่วงใส */
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
         transform: none !important;
         left: auto !important;
-        right: auto !important;
         margin: 0 !important;
     }
 
-    /* 2. จัดการโลโก้ DUSK อยู่ตรงกลาง */
+    /* 2. เสกโลโก้ DUSK ให้เรืองแสงออร่าสีม่วง เหมือนชื่อเซิร์ฟเวอร์เกมระดับโปร */
     .logo {
         position: static !important;
-        margin-bottom: 15px !important;
+        margin-bottom: 20px !important;
         text-align: center !important;
         width: 100% !important;
         transform: none !important;
     }
     .logo a {
         display: inline-block !important;
-        font-size: 28px !important;
+        font-size: 32px !important;
+        font-weight: 800 !important;
+        letter-spacing: 3px !important; /* เพิ่มระยะตัวอักษรให้ดูแพง */
         color: #ffffff !important;
+        text-shadow: 0 0 15px rgba(139, 92, 246, 0.8) !important; /* ออร่าม่วง */
     }
 
-    /* 3. ล้างค่ากล่องเมนูทั้งหมด ห้ามลอย ห้ามเยื้องซ้ายหลุดจอ */
+    /* 3. จัดกล่องเมนูและเว้นระยะห่างให้กดง่าย ไม่ติดกันเกินไป */
     .menu {
         display: flex !important;
-        flex-direction: column !important; /* จัดให้เรียงลงมาตรงๆ ทีละบรรทัด */
-        align-items: center !important;    /* บังคับให้อยู่ตรงกลางจอ ไม่ตกขอบ */
+        flex-direction: column !important;
+        align-items: center !important;
         justify-content: center !important;
         width: 100% !important;
+        gap: 10px !important; /* ช่องว่างระหว่างปุ่ม */
         position: static !important;
         transform: none !important;
         margin: 0 !important;
-        padding: 0 !important;
-        left: auto !important;
-        gap: 12px !important;              /* ระยะห่างแนวตั้งระหว่างปุ่ม */
+        padding: 0 20px !important;
+        box-sizing: border-box !important;
     }
 
-    /* 4. ปลดล็อกกล่อง Dropdown ให้กางไส้ในออกมาเรียงตรงๆ ไม่ซ่อนไม่ลอย */
+    /* 4. เคลียร์ไส้ในพวก Dropdown ให้ไหลรวมกันอย่างสวยงาม */
     .dropdown {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
         position: static !important;
-        transform: none !important;
         width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
+        gap: 10px !important;
         background: transparent !important;
         box-shadow: none !important;
         visibility: visible !important;
         opacity: 1 !important;
-        gap: 12px !important;
     }
 
-    /* 5. หมัดฮุกสุดท้าย: บังคับตัวลิงก์ทุกตัวให้อยู่ตรงกลาง ไม่โดนตัดตัวหนังสือ */
+    /* 5. 🌟 เปลี่ยนลิงก์ธรรมดาให้กลายเป็น "ปุ่มแคปซูลใส" สุดมินิมอล */
     .navbar a, .menu a, .dropdown a {
-        display: inline-block !important;
+        display: block !important;
+        width: 85% !important; /* ให้แผ่ความกว้างพอดี ๆ นิ้วมือ */
+        max-width: 260px !important;
+        text-align: center !important;
+        padding: 12px 0 !important; /* เพิ่มพื้นที่ความหนาให้กดง่าย */
+        color: #cbd5e1 !important; /* สีขาวนวลตา */
+        font-size: 15px !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.5px !important;
+        text-decoration: none !important;
+        border-radius: 12px !important; /* ขอบปุ่มมนสวยงาม */
+        background: rgba(255, 255, 255, 0.03) !important; /* พื้นหลังปุ่มใส ๆ */
+        border: 1px solid rgba(255, 255, 255, 0.08) !important; /* ขอบเส้นบาง ๆ */
         position: static !important;
         transform: none !important;
-        left: auto !important;
-        width: auto !important;
-        text-align: center !important;
-        margin: 0 !important;
-        padding: 5px 10px !important;
-        color: #ffffff !important; /* บังคับตัวหนังสือสีขาว */
-        font-size: 16px !important;
-        visibility: visible !important;
-        opacity: 1 !important;
+        transition: all 0.25s ease !important; /* เอฟเฟกต์ตอนกดให้สมูท */
+    }
+
+    /* 6. เอฟเฟกต์ตอบสนองตอนเอานิ้วจิ้ม (Feedback) จะเปลี่ยนเป็นสีม่วงโปร่งแสง */
+    .navbar a:active, .menu a:active, .dropdown a:active,
+    .navbar a:hover, .menu a:hover, .dropdown a:hover {
+        background: rgba(139, 92, 246, 0.2) !important; /* สีม่วงใสเข้ากับดีไซน์เว็บ */
+        border-color: rgba(139, 92, 246, 0.5) !important;
+        color: #ffffff !important;
+        transform: scale(1.02) !important; /* ปุ่มขยายใหญ่ขึ้นจึ๋งนึงตอนกด */
     }
 }
 
