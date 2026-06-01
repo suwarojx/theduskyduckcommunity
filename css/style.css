@@ -1897,7 +1897,286 @@ footer{
     }
 }
 
+/* ==========================================================================
+   ABOUT PAGE PREMIUM STYLING (Glassmorphism Gaming Theme)
+   ========================================================================== */
 
+/* กล่องคลุมหน้า About ทั้งหมด */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    font-family: 'Kanit', sans-serif;
+    color: #ffffff;
+}
+
+/* 1. ข้อความต้อนรับด้านบนสุด */
+.about-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.about-intro h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #ffffff, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 18px;
+    text-shadow: 0 0 25px rgba(139, 92, 246, 0.4);
+}
+.about-intro p {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* 2. จัดแต่งหัวข้อเซกชัน */
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.section-title h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+.section-title .title-line {
+    width: 60px;
+    height: 4px;
+    background: #8b5cf6;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #8b5cf6;
+}
+
+/* 3. ระบบ Grid การ์ด 4 ใบ (จอคอมจะแบ่งเป็น 4 คอลัมน์เท่ากัน) */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+/* สไตล์ตัวการ์ดแบบกระจกใสโปร่งแสง */
+.about-card {
+    background: rgba(30, 41, 59, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 35px 20px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* เอฟเฟกต์ตอนเมาส์ชี้ (การ์ดจะลอยขึ้นและเรืองแสงม่วง) */
+.about-card:hover {
+    transform: translateY(-8px);
+    background: rgba(139, 92, 246, 0.08);
+    border-color: rgba(139, 92, 246, 0.4);
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.25);
+}
+
+.card-icon {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.about-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* 4. แถบข้อมูลเซิร์ฟเวอร์ด้านล่างสุด */
+.server-info-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.5) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    padding: 25px;
+    border-radius: 14px;
+    max-width: 850px;
+    margin: 0 auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.info-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.info-box span {
+    font-size: 0.75rem;
+    color: #64748b;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.info-box strong {
+    font-size: 1.15rem;
+    color: #c084fc;
+    text-shadow: 0 0 10px rgba(192, 132, 252, 0.3);
+}
+
+/* ==================== RESPONSIVE FOR TABLET & MOBILE ==================== */
+
+/* จอแท็บเล็ต / ไอแพด (หดเหลือ 2 คอลัมน์) */
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* จอมือถือแนวตั้ง (เรียงเดี่ยวลงมาตรงๆ ทะลุขอบปลอดภัย) */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 40px 15px;
+    }
+    .about-intro h1 {
+        font-size: 2rem;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .server-info-section {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+        padding: 30px 15px;
+    }
+}
+
+/* ==========================================================================
+   BACKGROUND RESTORE & AUTOMATIC SLIDESHOW GALLERY
+   ========================================================================== */
+
+/* 🖼️ ดีไซน์กรอบรูปไฮเทค โปร่งแสง เรืองแสงม่วง */
+.server-gallery-wrapper {
+    max-width: 850px;
+    margin: 0 auto 60px auto;
+    padding: 10px;
+    background: rgba(30, 41, 59, 0.25);
+    border: 2px solid rgba(139, 92, 246, 0.3); /* เส้นขอบเรืองแสงม่วง */
+    border-radius: 22px;
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.15), inset 0 0 15px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    overflow: hidden;
+}
+
+/* ล็อกอัตราส่วนกรอบรูปเป็นสัดส่วนจอคอมพิวเตอร์ 16:9 */
+.gallery-slider {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* อัตราส่วนสากล 16:9 */
+    border-radius: 14px;
+    overflow: hidden;
+    background: #0f172a;
+}
+
+/* สไตล์ตัวรูปภาพข้างใน (ปรับเวลารวมแอนิเมชันเพิ่มเป็น 28s) */
+.gallery-slider .slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.03);
+    transition: transform 0.8s ease;
+    animation: cssSliderFade 28s infinite ease-in-out; /* ⏱️ ขยับเวลารวมเป็น 28 วินาที */
+}
+
+/* ⏱️ ลำดับเวลาหน่วง (Delay) ของทั้ง 7 รูป บวกเพิ่มทีละ 4 วินาที */
+.gallery-slider .slide-img:nth-child(1) { animation-delay: 0s; }
+.gallery-slider .slide-img:nth-child(2) { animation-delay: 4s; }
+.gallery-slider .slide-img:nth-child(3) { animation-delay: 8s; }
+.gallery-slider .slide-img:nth-child(4) { animation-delay: 12s; }
+.gallery-slider .slide-img:nth-child(5) { animation-delay: 16s; }
+.gallery-slider .slide-img:nth-child(6) { animation-delay: 20s; }
+.gallery-slider .slide-img:nth-child(7) { animation-delay: 24s; } /* 🌟 รูปที่ 7 */
+
+/* 🌟 ปรับเปอร์เซ็นต์แอนิเมชันให้สอดคล้องกับเวลา 28 วินาที (รูปอยู่บนจอ 4 วินาทีแล้วค่อยเฟดสลับ) */
+@keyframes cssSliderFade {
+    0% { opacity: 0; transform: scale(1.05); }
+    3% { opacity: 1; transform: scale(1); }    /* เฟดอินขึ้นมาเต็มร้อย */
+    14% { opacity: 1; }                         /* โชว์ภาพค้างไว้จนครบจังหวะ */
+    17% { opacity: 0; transform: scale(0.97); } /* เฟดเอาท์จางหายไปนุ่มๆ */
+    100% { opacity: 0; }
+}
+
+/* ปรับขนาดหน้าจอเมื่อเปิดในมือถือให้กรอบรูปกระชับพอดีจอ */
+@media (max-width: 768px) {
+    .server-gallery-wrapper {
+        margin: 0 10px 40px 10px;
+        padding: 6px;
+        border-radius: 16px;
+    }
+    .gallery-slider {
+        border-radius: 10px;
+    }
+}
+
+/* ==========================================================================
+   🔒 ABOUT PAGE ONLY (โค้ดชุดนี้จะทำงานเฉพาะหน้าเกี่ยวกับเท่านั้น ไม่ลามไปหน้าอื่น)
+   ========================================================================== */
+
+/* 🌌 คืนชีพพื้นหลังอวกาศ/ป่า "เฉพาะ" หน้าประมาณ (about-page) */
+body.about-page {
+    background: linear-gradient(180deg, rgba(10, 16, 32, 0.85) 0%, rgba(10, 16, 32, 0.95) 100%),
+                url('../img/bg.jpg') no-repeat center center fixed !important;
+    background-size: cover !important;
+}
+
+/* 📐 จัดระยะห่างหัวข้อ "เฉพาะ" หน้าประมาณ (about-page) */
+.about-page .server-info-section + .section-title {
+    margin-top: 80px !important;
+    margin-bottom: 45px !important;
+}
+
+/* 🖼️ จัดช่องไฟกล่องแกลเลอรี "เฉพาะ" หน้าประมาณ (about-page) */
+.about-page .server-gallery-wrapper {
+    margin-top: 0;
+    margin-bottom: 90px !important;
+}
+
+
+
+
+/* ==========================================================================
+   SPACING FOR GALLERY SECTION (เพิ่มระยะห่างโซนบรรยากาศ)
+   ========================================================================== */
+
+/* 1. ดันหัวข้อ "บรรยากาศภายในเซิร์ฟเวอร์" ให้ห่างจากกล่อง Server Info ด้านบน */
+.server-info-section + .section-title {
+    margin-top: 80px !important;    /* ช่องว่างระหว่างกล่องข้อมูลด้านบน กับ หัวข้อ */
+    margin-bottom: 45px !important; /* ช่องว่างระหว่างหัวข้อ กับ ตัวกรอบรูปสไลด์ */
+}
+
+/* 2. เพิ่มช่องว่างรอบๆ ตัวกรอบรูปสไลด์ */
+.server-gallery-wrapper {
+    margin-top: 0;
+    margin-bottom: 90px !important; /* ดันกล่องด้านล่าง/Footer ลงไปอีก 90px ให้ไม่ชนขอบ */
+}
 
 
   </style>
