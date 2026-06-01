@@ -6,11 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>เกี่ยวกับ - DUSK</title>
+
+<style>
+        /* 🌌 อัปเกรดความแรง สั่งเจาะจงไปเลยว่า body.about-page เพื่อให้ชนะไฟล์ CSS ตัวเก่า */
+        body.about-page {
+            background: linear-gradient(180deg, rgba(10, 16, 32, 0.85) 0%, rgba(10, 16, 32, 0.95) 100%),
+                        url('img/bg2.gif') no-repeat center center fixed !important;
+            background-size: cover !important;
+        }
+
+        /* โค้ดจัดระยะห่างด้านล่างปล่อยไว้เหมือนเดิมได้เลยครับเอง */
+        .server-info-section + .section-title {
+            margin-top: 80px !important;
+            margin-bottom: 45px !important;
+        }
+        .server-gallery-wrapper {
+            margin-top: 0;
+            margin-bottom: 90px !important;
+        }
+    </style>
 </head>
-<body>
+
+  </head>
+<body class="about-page">
 
 <!-- NAVBAR -->
-
 <nav class="navbar">
   <div class="logo">
     <a href="index.html">DUSK</a>
@@ -39,99 +59,86 @@
 
 <!-- HERO -->
 
-<section class="hero small-hero">
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-
-        <h1>
-            ABOUT <span>DUSK</span>
-        </h1>
-
-        <p>
-            Community Minecraft Roleplay ที่เน้นคุณภาพและประสบการณ์การเล่น
-        </p>
-
-    </div>
-
-</section>
-
-<!-- CONTENT -->
-
-<section class="content">
-
-    <div class="box">
-
-        <h2>เกี่ยวกับเซิร์ฟเวอร์</h2>
-
-        <p>
-            DUSK คือเซิร์ฟเวอร์ Minecraft Roleplay
-            ที่เน้นการเล่นสมจริง ระบบคุณภาพ และ Community
-            ที่เป็นมิตรต่อผู้เล่นทุกคน
-        </p>
-
-        <br>
-
-        <p>
-            เป้าหมายของเราคือสร้างพื้นที่
-            ที่ผู้เล่นสามารถสนุกกับ Roleplay
-            และสร้างประสบการณ์ร่วมกันได้ตลอดเวลา
-        </p>
-
-    </div>
-
-    <div class="box">
-
-        <h2>จุดเด่นของเซิร์ฟเวอร์</h2>
-
-        <p>✔ ระบบ Roleplay</p>
-        <p>✔ Community คุณภาพ</p>
-        <p>✔ ทีมงานดูแลตลอด</p>
-        <p>✔ กิจกรรมและ Event</p>
-        <p>✔ ระบบและเมืองภายในเซิร์ฟเวอร์</p>
-
-    </div>
-
-</section>
-
-<section class="roadmap-section">
-    <h2 class="roadmap-title">Development Roadmap</h2>
+<section class="about-container">
     
-    <div class="roadmap-container">
-        <div class="roadmap-card">
-            <div class="card-content">
-                <h3 class="card-title">มิถุนายน 2569 - กันยายน 2569</h3>
-                <p class="card-desc">เราจะทำการพัฒนา Build Map ต่างๆ และทดสอบระบบ Mod เพื่อให้ตัว Map และระบบทั้งหมดสมบูรณ์ที่สุด ก่อนเข้าสู่ช่วง Beta Test</p>
-            </div>
+    <div class="about-intro">
+        <h1>WELCOME TO DUSK COMMUNITY</h1>
+        <p>โปรเจกต์เซิร์ฟเวอร์ Minecraft Roleplay ขนาดยักษ์ที่สร้างขึ้นจากความหลงใหล มุ่งมั่นมอบประสบการณ์การใช้ชีวิตเสมือนจริงที่เข้มข้นและแปลกใหม่ที่สุดให้กับคุณ</p>
+    </div>
+
+    <div class="section-title">
+        <h2>เป้าหมายและจุดยืนของพวกเรา</h2>
+        <div class="title-line"></div>
+    </div>
+
+    <div class="about-grid">
+        
+        <div class="about-card">
+            <div class="card-icon">🌌</div>
+            <h3>Our Concept</h3>
+            <p>มิติใหม่แห่งการ Roleplay สมจริง เนื้อเรื่องเข้มข้น และให้อิสระกำหนดบทบาทชีวิตตัวเองได้อย่างเต็มที่</p>
         </div>
 
-        <div class="roadmap-card">
-            <div class="card-content">
-                <h3 class="card-title">เปิดรับสมัคร Project</h3>
-                <p class="card-desc">ช่วงเดือน กันยายน 2569 จะเปิดรับสมัครผู้เล่นเข้าร่วม Project BloodMoonLegacy</p>
-            </div>
+        <div class="about-card">
+            <div class="card-icon">🛠️</div>
+            <h3>Custom Features</h3>
+            <p>ขับเคลื่อนด้วยแมพและระบบ Mod พร้อมระบบเอาตัวรอดสุดท้าทาย</p>
         </div>
 
-        <div class="roadmap-card">
-            <div class="card-content">
-                <h3 class="card-title">Beta Test</h3>
-                <p class="card-desc">เปิดทดสอบทั้งหมด 3 รอบ</p>
-                <ul class="card-list">
-                    <li>27 กันยายน 2569</li>
-                    <li>29 กันยายน 2569</li>
-                    <li>1 ตุลาคม 2569</li>
-                </ul>
-            </div>
+        <div class="about-card">
+            <div class="card-icon">🛡️</div>
+            <h3>Safe Community</h3>
+            <p>ชุมชนที่เป็นมิตร พื้นที่ปลอดภัยสำหรับเกมเมอร์ทุกคน พร้อมทีมงานดูแลซัพพอร์ตตลอด 24 ชั่วโมง</p>
         </div>
 
-        <div class="roadmap-card">
-            <div class="card-content">
-                <h3 class="card-title">Official Release</h3>
-                <p class="card-desc">คาดว่าจะเปิด Project อย่างเป็นทางการ ในวันที่ 2 ตุลาคม 2569</p>
-            </div>
+        <div class="about-card">
+            <div class="card-icon">🚀</div>
+            <h3>Our Vision</h3>
+            <p>โปรเจกต์ระยะยาวที่พร้อมอัปเดตฟีเจอร์ใหม่ ๆ ตามคำแนะนำของผู้เล่นในทุกซีซัน</p>
+        </div>
+
+    </div>
+
+    <div class="server-info-section">
+        <div class="info-box">
+            <span>GAME VERSION</span>
+            <strong>Java 1.20.1 (Forge)</strong>
+        </div>
+        <div class="info-box">
+            <span>SERVER CONCEPT</span>
+            <strong>Survival Horror Roleplay / Story</strong>
+        </div>
+        <div class="info-box">
+            <span>ACCESS STYLE</span>
+            <strong>Whitelist & Launcher</strong>
         </div>
     </div>
+
+    <!-- (วางต่อท้ายกล่องกล่องประมาณ about-grid ตัวเก่า) -->
+    </div> 
+
+    <!-- 🌟 โซนใหม่: กรอบรูปโชว์บรรยากาศเปลี่ยนรูปอัตโนมัติ 🌟 -->
+    <div class="section-title">
+        <h2>ความทรงจำและบรรยากาศภายในเซิร์ฟเวอร์</h2>
+        <div class="title-line"></div>
+    </div>
+
+    <div class="server-gallery-wrapper">
+        <div class="gallery-slider">
+            <!-- 📌 เองเปลี่ยนชื่อไฟล์รูปภาพในโฟลเดอร์ของตัวเองตรง src="..." ได้เลยน้า -->
+            <img src="img/slide1.png" alt="DUSK Atmosphere 1" class="slide-img">
+            <img src="img/slide2.jpg" alt="DUSK Atmosphere 2" class="slide-img">
+            <img src="img/slide3.jpg" alt="DUSK Atmosphere 3" class="slide-img">
+            <img src="img/slide4.jpg" alt="DUSK Atmosphere 4" class="slide-img">
+            <img src="img/slide5.jpg" alt="DUSK Atmosphere 5" class="slide-img">
+            <img src="img/slide6.jpg" alt="DUSK Atmosphere 6" class="slide-img">
+            <img src="img/slide7.jpg" alt="DUSK Atmosphere 7" class="slide-img">
+        </div>
+    </div>
+
+    <!-- (ด้านล่างนี้จะเป็นกล่อง server-info-section ตัวเดิมของเอง) -->
+    <div class="server-info-section">
+
 </section>
 
 <!-- FOOTER -->
